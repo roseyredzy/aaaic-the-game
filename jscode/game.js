@@ -99,7 +99,7 @@ function endGameClick() {
 
         var textContainer = document.createElement("span");
         var text = document.createElement("p");
-        if(voteNumber == NaN) {
+        if(Number.isNaN(voteNumber)) {
             text.textContent = `Player ${i}: 0 votes`
         } else {
             text.textContent = `Player ${i}: ${voteNumber} votes`
@@ -112,4 +112,5 @@ function endGameClick() {
     }
 
     gameContainer.appendChild(messageDiv);
+
 }
