@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAAIC - Credits</title>
+    <style>
+        body {
+            font-family: 'Stack Sans Headline', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: normal;
+            color: white;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="../UI/images/AAAIC.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder">
+        <script>
+            $(function(){
+                $("#nav-placeholder").load("../UI/navbar.html");
+            });
+        </script>
+    </div>
+    <div class="mainPage">
+        <div class="gptHeader">
+            <i class="fa fa-cogs fa-4x gptHeaderIcon" aria-hidden="true"></i>
+            <span class="fadeType gptHeaderText">Game Options</span>
+        </div>
+        <div class="gameOptions">
+            <div class="messages">
+                <div class="userAndIcon">
+                    <img class="gptIcon" src="../UI/images/AAAIC.svg">
+                    <span class="gptName">The AI</span>
+                </div>
+                <span class="gptText"><p>
+                    <b>Important Note:</b> These game settings will reset to their defaults upon leaving the browser or closing this tab.<br>
+                    <span class="booleanText">*They will save even after tab refresh or page switch, though.</span>
+                </p></span>
+            </div>
+            <div class="messages">
+                <div class="userAndIcon">
+                    <i class="fa fa-users fa-2x gptIcon" aria-hidden="true"></i>
+                    <span class="gptName">Player Count</span>
+                </div>
+                <span class="gptText"><p>
+                    Use the slider down below to set <em>player count</em>.<br>
+                    A count of <em>6 to 7</em> players is recommended.<br>
+                </p></span>
+                <div class="sliderContainer">
+                    <input type="range" min="2" max="10" value="5" class="slider" id="playerCount">
+                    <output for="playerCount" id="sliderVal">5</output>
+                </div>
+            </div>
+            <div class="messages">
+                <div class="userAndIcon">
+                    <i class="fa fa-balance-scale fa-2x gptIcon" aria-hidden="true"></i>
+                    <span class="gptName">Randomized Ethical Principles</span>
+                </div>
+                <span class="gptText"><p>
+                    This option adds a <em>required, randomized ethical view</em> to use when arguing your prompt.<br>
+                    Can also be checked to use as a guideline, recommended for unexperienced players.<br>
+                    This is left checked on default.<br>
+                </p></span>
+                <div class="gptText">
+                    <input type="checkbox" id="specifyEthicalPrinciple" checked><b class="booleanText">Require Ethical Principles?</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gptFakeMessager">
+        <i class="fa fa-search" id="messagerIcon"></i>
+        <span class="fadeIn" id="messagerText">Insert random message here.</span>
+    </div>
+    <script src="../jscode/options.js"></script>
+</body>
+</html>

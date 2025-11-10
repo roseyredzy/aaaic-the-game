@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAAIC - Credits</title>
+    <style>
+        body {
+            font-family: 'Stack Sans Headline', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: normal;
+            color: white;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="../UI/images/AAAIC.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder">
+        <script>
+            $(function(){
+                $("#nav-placeholder").load("../UI/navbar.html");
+            });
+        </script>
+    </div>
+    <div class="mainPage">
+        <div class="gptHeader">
+            <i class="fa fa-users fa-4x gptHeaderIcon" aria-hidden="true"></i>
+            <span class="fadeType gptHeaderText">Game Credits</span>
+        </div>
+        <div class="creditsText">
+            <div class="messages">
+                <div class="userAndIcon">
+                    <img class="gptIcon" src="../UI/images/AAAIC.svg">
+                    <span class="gptName">The AI</span>
+                </div>
+                <span class="gptText"><p>
+                    This game was made for the creators' course in <em>GEETHIC</em>.<br>
+                    Inspired by the card game <em>"Cards Against Humanity"</em>.<br>
+                    All card prompts created by the group members listed in the next message.
+                </p></span>
+            </div>
+            <div class="messages">
+                <div class="userAndIcon">
+                    <img class="gptIcon" src="../UI/images/AAAIC.svg">
+                    <span class="gptName">The AI</span>
+                </div>
+                <span class="gptText"><p>
+                    Game Creators:<br>
+                    <li>Rosalynne Cu</li>
+                    <li>Lee Taguinod</li>
+                    <li>Rav Astom</li>
+                    <li>Lauren Valencia</li>
+                    <li>Dani Carpio</li>
+                    <li>Chanelle Villaflores</li>
+                </p></span>
+            </div>
+        </div>
+    </div>
+    <div class="gptFakeMessager">
+        <i class="fa fa-search" id="messagerIcon"></i>
+        <span class="fadeIn" id="messagerText">Disclaimer: No ChatGPT was involved in the creation of this game!</span>
+    </div>
+</body>
+</html>
