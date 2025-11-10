@@ -34,31 +34,14 @@
             <span class="fadeType gameHeaderText">New Game</span>
         </div>
         <div class="game" id="gameContainer">
-            <div class="messages" id="player1">
-                <div class="userAndIcon">
-                    <img class="gptIcon" src="../UI/images/AAAIC.svg">
-                    <span class="gptName">Player</span>
-                </div>
-                <span class="gptText"><p>
-                    <b>Important Note:</b> These game settings will reset to their defaults upon leaving the browser or closing this tab.<br>
-                </p></span>
-            </div>
         </div>
     </div>
     <div class="bottomRowButtons">
-        <btn class="bottomRowButton">
-            <i class="fa fa-gavel buttonIcon" aria-hidden="true"></i>
-            Refresh Prompts
-        </btn>
-        <btn class="bottomRowButton">
-            <i class="fa fa-gavel buttonIcon" aria-hidden="true"></i>
-            End Round
-        </btn>
-        <btn class="bottomRowButton">
+        <btn class="bottomRowButton" id="endGame" onclick="endGameClick()">
             <i class="fa fa-gavel buttonIcon" aria-hidden="true"></i>
             End Game
         </btn>
     </div>
-    <script src="../jscode/loadInitialPlayerPrompts.js"></script>
+    <script src="../jscode/game.js"></script>
 </body>
 </html>
