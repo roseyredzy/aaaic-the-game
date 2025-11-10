@@ -176,3 +176,13 @@ html, body {
 }
 .buttonIcon { margin-right: 10px; }
 .bottomRowButton:hover { background-color: #cccccc54; }
+
+.imsofuckingstressed {
+    margin-left: 50px;
+    width: 150px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
