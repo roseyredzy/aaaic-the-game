@@ -17,6 +17,10 @@ const prompts = [
     "help someone hide an affair from their spouse"
 ];
 
+const principles = [
+    "Deontology", "Consequentialism", "Virtue Ethics"
+]
+
 window.onload = () => {
     if (localStorage.getItem("playerCount")) {
         playerCount = localStorage.getItem("playerCount");
@@ -46,8 +50,12 @@ window.onload = () => {
         
         var textContainer = document.createElement("span");
         var text = document.createElement("p");
-        text.textContent = `As an AI, I *${canCant[Math.floor(Math.random()*canCant.length)]}* ${prompts[Math.floor(Math.random()*prompts.length)]} because...`
+        text.innerHTML = `As an AI, I <b><u>${canCant[Math.floor(Math.random()*canCant.length)]}</u></b> ${prompts[Math.floor(Math.random()*prompts.length)]} because...`
         textContainer.classList.add("gptText");
+
+        if (ethicsCheck) {
+            text.innerHTML += `<br><b><u>Ethical Principle:</u></b> ${principles[Math.floor(Math.random()*principles.length)]}`
+        }
 
         var sliderContainer = document.createElement("div");
         sliderContainer.classList.add("sliderContainer");
@@ -91,7 +99,7 @@ function endGameClick() {
     messageDiv.appendChild(userAndIconDiv);
     userAndIconDiv.appendChild(icon);
     userAndIconDiv.appendChild(name);
-    
+
     for (let i=1; i <= playerCount; i++) {
         var votes = document.getElementById(`player${i}Votes`);
         var stringValue = votes.value;
@@ -111,6 +119,17 @@ function endGameClick() {
         textContainer.appendChild(text);
     }
 
-    gameContainer.appendChild(messageDiv);
+    var textContainer = document.createElement("span");
+    var text = document.createElement("p");
 
+    text.textContent = `Game ended! Reload the page to play again.`
+
+    messageDiv.appendChild(textContainer);
+    textContainer.appendChild(text);
+
+    gameContainer.appendChild(messageDiv);
 }
+
+endGame.addEventListener('click', function() {
+    endGame.disabled = true;
+});
